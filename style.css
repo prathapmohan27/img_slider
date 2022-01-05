@@ -1,0 +1,79 @@
+.slide-container {
+  width: 800px;
+  height: 500px;
+  background-color: rgb(147, 155, 154);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  padding: 0;
+}
+.slide-container .img-container {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  background-color: rgb(199, 177, 174);
+  padding: 10px;
+  transition: opacity 500ms ease-in-out;
+}
+.slide-container .img-container img {
+  width: 100%;
+  height: auto;
+}
+
+.arrowButton {
+  position: absolute;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 0 10px 0;
+  transition: background-color 200ms linear;
+}
+.arrowButton i {
+  color: rgb(236, 226, 215);
+  font-size: 3em;
+  font-weight: 700;
+}
+.next {
+  right: 0;
+}
+.back {
+  left: 0;
+}
+.arrowButton:hover {
+  background-color: rgb(44, 42, 44);
+}
+.dot-container {
+  position: absolute;
+  bottom: 0;
+}
+.dot-container .dot {
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  border: 1px solid;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.slide-container .active {
+  opacity: 1;
+}
+.dot-container .dotBg {
+  background-color: black;
+}
+@media only screen and (max-width: 768px) {
+  .slide-container {
+    width: 100%;
+    height: 400px;
+  }
+  .slide-container .img-container {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
